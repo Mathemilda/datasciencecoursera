@@ -1,0 +1,273 @@
+Welcome to Git (version 1.9.5-preview20141217)
+
+
+Run 'git help git' to display the help index.
+Run 'git help <command>' to display help for specific commands.
+
+Owner@OWNER-PC ~
+$ pwd
+/c/Users/Owner
+
+Owner@OWNER-PC ~
+$ cd GitLocal/
+
+Owner@OWNER-PC ~/GitLocal
+$ git add . HelloWorld.md
+fatal: Not a git repository (or any of the parent directories): .git
+
+Owner@OWNER-PC ~/GitLocal
+$ git help git
+Launching default browser to display HTML ...
+
+Owner@OWNER-PC ~/GitLocal
+$ git push
+fatal: Not a git repository (or any of the parent directories): .git
+
+Owner@OWNER-PC ~/GitLocal
+$ man repo
+sh.exe": man: command not found
+
+Owner@OWNER-PC ~/GitLocal
+$ git add .
+fatal: Not a git repository (or any of the parent directories): .git
+
+Owner@OWNER-PC ~/GitLocal
+$ list
+sh.exe": list: command not found
+
+Owner@OWNER-PC ~/GitLocal
+$ ls
+HelloWorld.md
+
+Owner@OWNER-PC ~/GitLocal
+$ git add -A HelloWorld.md
+fatal: Not a git repository (or any of the parent directories): .git
+
+Owner@OWNER-PC ~/GitLocal
+$ git config
+usage: git config [options]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_rege
+x]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color <slot>    find the color configured: [default]
+    --get-colorbool <slot>
+                          find the color setting: [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --includes            respect include directives on lookup
+
+
+Owner@OWNER-PC ~/GitLocal
+$ git init
+Initialized empty Git repository in c:/Users/Owner/GitLocal/.git/
+
+Owner@OWNER-PC ~/GitLocal (master)
+$ git remote add origin https://github.com/Mathemilda/datasciencecoursera.git
+
+Owner@OWNER-PC ~/GitLocal (master)
+$ git add .
+
+Owner@OWNER-PC ~/GitLocal (master)
+$ git clone https://github.com/Mathemilda/datasciencecoursera.git
+Cloning into 'datasciencecoursera'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done.
+
+Owner@OWNER-PC ~/GitLocal (master)
+$ git add .
+
+Owner@OWNER-PC ~/GitLocal (master)
+$ ls
+HelloWorld.md  datasciencecoursera
+
+Owner@OWNER-PC ~/GitLocal (master)
+$ git commit -m "project for coursera.com"
+[master (root-commit) f6f08ba] project for coursera.com
+ 2 files changed, 2 insertions(+)
+ create mode 100644 HelloWorld.md
+ create mode 160000 datasciencecoursera
+
+Owner@OWNER-PC ~/GitLocal (master)
+$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': Mathemilda
+Password for 'https://Mathemilda@github.com':
+To https://github.com/Mathemilda/datasciencecoursera.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Mathemilda/datasciencecou
+rsera.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Owner@OWNER-PC ~/GitLocal (master)
+$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com':
+Password for 'https://github.com':
+remote: Anonymous access to Mathemilda/datasciencecoursera.git denied.
+fatal: Authentication failed for 'https://github.com/Mathemilda/datasciencecours
+era.git/'
+
+Owner@OWNER-PC ~/GitLocal (master)
+$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': Mathemilda
+Password for 'https://Mathemilda@github.com':
+To https://github.com/Mathemilda/datasciencecoursera.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Mathemilda/datasciencecou
+rsera.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Owner@OWNER-PC ~/GitLocal (master)
+$ git pull
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Mathemilda/datasciencecoursera
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+Owner@OWNER-PC ~/GitLocal (master)
+$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': Mathemilda
+Password for 'https://Mathemilda@github.com':
+To https://github.com/Mathemilda/datasciencecoursera.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Mathemilda/datasciencecou
+rsera.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Owner@OWNER-PC ~/GitLocal (master)
+$
