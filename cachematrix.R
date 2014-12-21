@@ -1,4 +1,4 @@
-## The function takes a matrix and creates an equal matix with 
+## The function takes a matrix and creates a list with equal matix with 
 ## cached attachment. 
 ## The attachment will be created by another function (cacheSolve)
 ## when it is called and it is the inverse of original matrix.
@@ -19,7 +19,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The function looks for inverse matrix as attachment and if it 
+## is not here then the inverse is created and put as attachment.
+
 
 cacheSolve <- function(x, ...) {
   inverse <- x$getsolve()
